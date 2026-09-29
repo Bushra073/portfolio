@@ -11,9 +11,18 @@ function Navbar() {
 
   return (
     <nav className="portfolio-navbar">
-      <a href="#home" className="logo" onClick={closeMenu}>
+      {/* <a href="#home" className="logo" onClick={closeMenu}>
         BS
-      </a>
+      </a> */}
+
+      <a href="#home" className="logo" onClick={closeMenu}>
+  <img
+    src="/cat.jpg"
+    alt="Portfolio home"
+    // className="h-9 w-9 object-contain"
+    className="w-10 h-10 rounded-full object-cover"
+  />
+</a>
 
       {/* Desktop navigation */}
       <div className="nav-links">

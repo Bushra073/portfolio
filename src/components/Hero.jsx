@@ -142,7 +142,7 @@ function Hero() {
 
           {/* Central BS glass orb */}
 
-          <div className="absolute left-1/2 top-1/2 flex h-44 w-44 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-white/20 shadow-[0_25px_80px_rgba(76,54,130,0.25)] backdrop-blur-2xl">
+          {/* <div className="absolute left-1/2 top-1/2 flex h-44 w-44 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-white/20 shadow-[0_25px_80px_rgba(76,54,130,0.25)] backdrop-blur-2xl">
 
             <div className="absolute inset-3 rounded-full border border-white/30" />
 
@@ -152,7 +152,36 @@ function Hero() {
               BS
             </span>
 
-          </div>
+          </div> */}
+
+{/* Central image glass orb */}
+
+<div className="absolute left-1/2 top-1/2 flex h-44 w-44 -translate-x-1/2 -translate-y-1/2 items-center justify-center overflow-hidden rounded-full border border-white/70 bg-white/20 shadow-[0_25px_80px_rgba(76,54,130,0.25)] backdrop-blur-2xl">
+
+  {/* Image */}
+  <img
+    src="/blueflower.png"
+    alt=""
+    className="absolute inset-0 h-full w-full object-cover opacity-75"
+    style={{
+      maskImage:
+        'radial-gradient(circle, black 45%, transparent 100%)',
+      WebkitMaskImage:
+        'radial-gradient(circle, black 45%, transparent 100%)',
+    }}
+  />
+
+  {/* Soft glass overlay */}
+  <div className="absolute inset-0 rounded-full bg-white/10" />
+
+  {/* Inner glass ring */}
+  <div className="absolute inset-3 rounded-full border border-white/30" />
+
+  {/* Glass highlight */}
+  <div className="absolute left-8 top-7 h-12 w-12 rounded-full bg-white/40 blur-xl" />
+
+</div>
+
 
 
           {/* Academia bubble */}
