@@ -16,10 +16,13 @@ body {
 
 
 
+/* ================================
+   NAVBAR
+================================ */
 
 .portfolio-navbar {
   position: relative;
-  z-index: 20;
+  z-index: 50;
 
   width: 90%;
   max-width: 1200px;
@@ -45,11 +48,14 @@ body {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 1px;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  align-items: center;
+  gap: 26px;
 }
 
 .nav-links a {
@@ -57,6 +63,7 @@ body {
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
+  white-space: nowrap;
   transition: color 0.25s ease;
 }
 
@@ -75,6 +82,7 @@ body {
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
+  white-space: nowrap;
 
   transition: all 0.25s ease;
 }
@@ -84,6 +92,136 @@ body {
   transform: translateY(-2px);
 }
 
+
+/* ================================
+   MOBILE NAVBAR
+================================ */
+
+.mobile-menu-button,
+.mobile-nav-links {
+  display: none;
+}
+
+
+/* Tablet / smaller screens */
+
+@media (max-width: 850px) {
+  .portfolio-navbar {
+    width: 92%;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .nav-button {
+    padding: 9px 14px;
+    font-size: 13px;
+  }
+}
+
+
+/* Phone */
+
+@media (max-width: 700px) {
+  .portfolio-navbar {
+    width: calc(100% - 28px);
+    margin: 14px auto;
+    padding: 12px 15px;
+    border-radius: 16px;
+
+    flex-wrap: wrap;
+  }
+
+  .nav-links,
+  .portfolio-navbar > .nav-button {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 10px;
+
+    background: rgba(128, 99, 189, 0.12);
+    color: #35285a;
+
+    font-size: 23px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+      background 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .mobile-menu-button:hover {
+    background: rgba(128, 99, 189, 0.2);
+    transform: scale(1.04);
+  }
+
+  .mobile-nav-links {
+    width: 100%;
+
+    margin-top: 12px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    border-top: 1px solid rgba(118, 87, 184, 0.12);
+  }
+
+  .mobile-nav-links a {
+    padding: 12px 14px;
+
+    color: #29263a;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    border-radius: 10px;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .mobile-nav-links a:hover {
+    background: rgba(128, 99, 189, 0.1);
+    color: #7657b8;
+  }
+
+  .mobile-nav-links .mobile-talk-button {
+    margin-top: 5px;
+
+    background: #8063bd;
+    color: white;
+
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .mobile-nav-links .mobile-talk-button:hover {
+    background: #6d50a7;
+    color: white;
+  }
+}
 
 
 .personality-bubble {
@@ -138,5 +276,16 @@ body {
 
   50% {
     transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes educationFloat {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: -10px;
   }
 }
