@@ -5,7 +5,7 @@ const projects = [
     title: 'Civic Rights & Safety Hub',
     category: 'WEB / DBMS',
     description:
-      'A civic-focused project designed around making rights, safety, and useful civic information easier to access.',
+      'When the system makes justice almost impossible, we make it just as accountable;',
     github: 'https://github.com/Bushra073/Civic-Rights-Project',
     live: null,
   },
@@ -14,7 +14,7 @@ const projects = [
     title: 'MindfulReads',
     category: 'JAVA',
     description:
-      'A reading-focused Java project built around exploring and managing books.',
+      'Would not you love to own a bookshelf that handpicks the book for you depending on your mood.',
     github: 'https://github.com/Bushra073/MindfulReads',
     live: null,
   },
@@ -49,16 +49,16 @@ const projects = [
   },
 
   {
-    title: 'Assignment 2',
+    title: 'The Flower Shop',
     category: 'WEB PROJECT',
     description:
-      'A frontend project created as part of my web development coursework.',
+      'My first frontend project where I explored web responsiveness.',
     github: 'https://github.com/Bushra073/assignment-2',
     live: 'http://bushra073.github.io/assignment-2/',
   },
 
   {
-    title: 'Assignment 5',
+    title: 'Emergency Social Service ',
     category: 'JAVASCRIPT',
     description:
       'A JavaScript-focused coursework project exploring interactive web development concepts.',

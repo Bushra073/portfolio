@@ -1,6 +1,4 @@
 
-   /* GLOBAL */
-
 
 * {
   box-sizing: border-box;
@@ -12,14 +10,11 @@ html {
 
 body {
   margin: 0;
-  background: #d4c9d9;
+  background: transparent;
   color: #181525;
-  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 
-
-   /* NAVBAR */
 
 
 .portfolio-navbar {
@@ -62,7 +57,6 @@ body {
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
-
   transition: color 0.25s ease;
 }
 
@@ -92,649 +86,57 @@ body {
 
 
 
-   /* HERO */
-
-
-.portfolio-hero {
-  position: relative;
-
-  /* width: 100%; */
-  width: 100%;
-  max-width: 1250px;
-  /* min-height: calc(100vh - 100px); */
- min-height: 620px;
-  /* margin: 0 auto; */
-  margin: 20px auto 70px;
-border-radius: 32px;
-  padding: 60px 55px;
-
-  display: grid;
-
-  grid-template-columns: minmax(0, 1fr) 340px;
-
-  gap: 65px;
-
-  align-items: center;
-
-  overflow: hidden;
+.personality-bubble {
+  border-radius: 42% 58% 63% 37% / 45% 38% 62% 55%;
+  animation: personalityFloat 6s ease-in-out infinite;
+  transition:
+    transform 0.4s ease,
+    border-radius 0.6s ease;
 }
 
-
-
-   /* HERO LEFT */
-
-
-.portfolio-hero-content {
-  position: relative;
-  z-index: 3;
-
-  min-width: 0;
-  width: 100%;
+.personality-bubble-academia {
+  animation-delay: 0s;
 }
 
-.hero-intro {
-  margin: 0 0 16px;
-
-  color: #7657b8;
-
-  font-size: 13px;
-  font-weight: 700;
-
-  letter-spacing: 4px;
+.personality-bubble-code {
+  border-radius: 58% 42% 38% 62% / 55% 60% 40% 45%;
+  animation-delay: -2s;
 }
 
-.portfolio-hero h1 {
-  margin: 0;
-
-  color: #171525;
-
-  font-size: clamp(44px, 5.5vw, 76px);
-
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -3px;
-
-  overflow-wrap: break-word;
+.personality-bubble-literature {
+  border-radius: 63% 37% 52% 48% / 40% 58% 42% 60%;
+  animation-delay: -4s;
 }
 
-.cursor {
-  color: #8b6fc4;
-  animation: blink 0.8s infinite;
+@keyframes personalityFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(4deg);
+  }
 }
 
-.portfolio-hero h2 {
-  margin: 22px 0 0;
-
-  color: #302b40;
-
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.hero-description {
-  width: 100%;
-  max-width: 560px;
-
-  margin: 18px 0 0;
-
-  color: #504a5f;
-
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 14px;
-
-  margin-top: 30px;
-}
-
-.primary-button,
-.secondary-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 48px;
-  padding: 12px 22px;
-
-  border-radius: 12px;
-
-  text-decoration: none;
-
-  font-size: 14px;
-  font-weight: 600;
-
-  transition: all 0.25s ease;
-}
-
-.primary-button {
-  background: #8063bd;
-  color: white;
-
-  box-shadow: 0 10px 25px rgba(128, 99, 189, 0.2);
-}
-
-.primary-button:hover {
-  background: #6d50a7;
-  transform: translateY(-3px);
-}
-
-.secondary-button {
-  border: 1px solid #d2c5ea;
-
-  background: rgba(255, 255, 255, 0.55);
-
-  color: #49396b;
-}
-
-.secondary-button:hover {
-  background: rgba(255, 255, 255, 0.9);
-  transform: translateY(-3px);
-}
-
-
-
-  /* HERO RIGHT */
-
-
-.portfolio-hero-side {
-  position: relative;
-
-  width: 340px;
-  height: 380px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 0;
-}
-
-
-/* Glow */
-
-.personality-orbit {
-  position: absolute;
-
-  width: 300px;
-  height: 300px;
-
+.personality-bubble:hover {
   border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(185, 155, 229, 0.4) 0%,
-      rgba(215, 200, 241, 0.25) 45%,
-      transparent 72%
-    );
-
-  animation: breathe 5s ease-in-out infinite;
-}
-
-
-/*  Main card  */
-
-.personality-card {
-  position: relative;
-  z-index: 2;
-
-  width: 255px;
-  height: 300px;
-
-  border-radius: 28px;
-
-  border: 1px solid rgba(255, 255, 255, 0.9);
-
-  background: rgba(255, 255, 255, 0.48);
-
-  backdrop-filter: blur(20px);
-
-  box-shadow:
-    0 25px 55px rgba(91, 70, 130, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95);
-
-  animation: float 5s ease-in-out infinite;
+  transform: translateY(-8px) scale(1.05);
 }
 
 
 
-   /* //PERSONALITY CENTER */
-
-
-.personality-center {
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-
-  width: 82px;
-  height: 82px;
-
-  transform: translate(-50%, -50%);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.95),
-      rgba(218, 202, 243, 0.75)
-    );
-
-  border: 1px solid rgba(255, 255, 255, 0.95);
-
-  box-shadow:
-    0 12px 30px rgba(105, 80, 155, 0.12),
-    inset 0 2px 5px rgba(255, 255, 255, 0.95);
+.beyond-blob {
+  animation: beyondFloat 5s ease-in-out infinite;
 }
 
-.personality-center span {
-  color: #59427f;
-
-  font-size: 27px;
-  font-weight: 700;
-
-  letter-spacing: -1px;
-}
-
-
-
-   /* //PERSONALITY LABELS */
-
-
-.personality-item {
-  position: absolute;
-
-  display: flex;
-  align-items: center;
-
-  gap: 9px;
-
-  padding: 9px 11px;
-
-  background: rgba(255, 255, 255, 0.82);
-
-  border: 1px solid rgba(255, 255, 255, 0.9);
-
-  border-radius: 13px;
-
-  box-shadow: 0 10px 25px rgba(91, 70, 130, 0.09);
-
-  backdrop-filter: blur(12px);
-
-  white-space: nowrap;
-}
-
-.personality-icon {
-  width: 29px;
-  height: 29px;
-
-  flex-shrink: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 9px;
-
-  background: #eee7f9;
-
-  color: #7657b8;
-
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.personality-item strong {
-  display: block;
-
-  color: #29233a;
-
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.personality-item small {
-  display: block;
-
-  margin-top: 2px;
-
-  color: #766e83;
-
-  font-size: 8px;
-}
-
-
-/* Keep labels inside the right-side area */
-
-.personality-academia {
-  top: 30px;
-  left: -5px;
-}
-
-.personality-code {
-  top: 135px;
-  right: -5px;
-}
-
-.personality-literature {
-  bottom: 30px;
-  left: 5px;
-}
-
-
-
-   /* BACKGROUND BUBBLES */
-
-
-.bubble {
-  position: absolute;
-
-  z-index: 0;
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle at 30% 25%,
-      rgba(255, 255, 255, 0.95),
-      rgba(205, 184, 238, 0.3) 55%,
-      rgba(171, 140, 218, 0.12)
-    );
-
-  border: 1px solid rgba(255, 255, 255, 0.8);
-
-  box-shadow:
-    inset -8px -8px 20px rgba(153, 123, 202, 0.08),
-    0 15px 35px rgba(105, 80, 155, 0.08);
-
-  pointer-events: none;
-}
-
-.bubble-one {
-  width: 85px;
-  height: 85px;
-
-  top: 20%;
-  left: 8%;
-
-  animation: drift-one 7s ease-in-out infinite;
-}
-
-.bubble-two {
-  width: 38px;
-  height: 38px;
-
-  top: 28%;
-  right: 5%;
-
-  animation: drift-two 5s ease-in-out infinite;
-}
-
-.bubble-three {
-  width: 55px;
-  height: 55px;
-
-  bottom: 12%;
-  left: 48%;
-
-  animation: drift-three 6s ease-in-out infinite;
-}
-
-.bubble-four {
-  width: 24px;
-  height: 24px;
-
-  bottom: 20%;
-  right: 4%;
-
-  animation: drift-two 4s ease-in-out infinite reverse;
-}
-
-
-   /* ANIMATIONS */
-
-
-@keyframes blink {
-  0%,
-  45% {
-    opacity: 1;
-  }
-
-  50%,
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes float {
+@keyframes beyondFloat {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0) rotate(-4deg);
   }
 
   50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes breathe {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.75;
-  }
-
-  50% {
-    transform: scale(1.06);
-    opacity: 1;
-  }
-}
-
-@keyframes drift-one {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(15px, -18px);
-  }
-}
-
-@keyframes drift-two {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(-10px, 12px);
-  }
-}
-
-@keyframes drift-three {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(12px, -10px);
-  }
-}
-
-
-
-   /* responsiveness */
-
-
-@media (max-width: 1050px) {
-
-  .portfolio-hero {
-    grid-template-columns: 1fr;
-
-    min-height: auto;
-
-    padding: 70px 45px;
-
-    text-align: center;
-  }
-
-  .portfolio-hero-content {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .hero-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .portfolio-hero-side {
-    width: 340px;
-    height: 370px;
-
-    margin: 30px auto 0;
-  }
-}
-
-
-
-   /* TABLET */
-
-
-@media (max-width: 700px) {
-
-  .portfolio-navbar {
-    width: 94%;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .portfolio-hero {
-    padding: 55px 25px;
-  }
-
-  .portfolio-hero h1 {
-    font-size: clamp(42px, 10vw, 62px);
-    letter-spacing: -2px;
-  }
-
-  .portfolio-hero h2 {
-    font-size: 18px;
-  }
-
-  .hero-description {
-    font-size: 15px;
-  }
-
-  .portfolio-hero-side {
-    width: 310px;
-    height: 350px;
-  }
-
-  .personality-card {
-    width: 245px;
-    height: 290px;
-  }
-
-  .personality-orbit {
-    width: 285px;
-    height: 285px;
-  }
-}
-
-
-
-   /* MOBILE */
-
-
-@media (max-width: 480px) {
-
-  .portfolio-navbar {
-    margin-top: 15px;
-    padding: 12px 15px;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-
-  .nav-button {
-    padding: 9px 14px;
-    font-size: 12px;
-  }
-
-  .portfolio-hero {
-    padding: 50px 18px;
-  }
-
-  .portfolio-hero h1 {
-    font-size: clamp(36px, 11vw, 48px);
-  }
-
-  .portfolio-hero h2 {
-    font-size: 16px;
-  }
-
-  .hero-description {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .primary-button,
-  .secondary-button {
-    width: 180px;
-  }
-
-  .portfolio-hero-side {
-    width: 290px;
-    height: 340px;
-  }
-
-  .personality-card {
-    width: 225px;
-    height: 275px;
-  }
-
-  .personality-orbit {
-    width: 270px;
-    height: 270px;
-  }
-
-  .personality-item {
-    transform: scale(0.85);
-  }
-
-  .personality-academia {
-    left: -18px;
-  }
-
-  .personality-code {
-    right: -18px;
-  }
-
-  .personality-literature {
-    left: -15px;
+    transform: translateY(-10px) rotate(2deg);
   }
 }

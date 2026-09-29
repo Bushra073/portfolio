@@ -1,0 +1,134 @@
+/* Education blob cluster */
+
+.education-cluster {
+  perspective: 1000px;
+  overflow: visible;
+}
+
+.education-side-glow {
+  position: absolute;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(65px);
+  transform: translateY(-50%);
+}
+
+.education-glow-left {
+  left: -30px;
+  background: rgba(180, 150, 255, 0.28);
+}
+
+.education-glow-right {
+  right: -30px;
+  background: rgba(145, 180, 255, 0.25);
+}
+
+.education-blob {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+
+  width: 255px;
+  height: 205px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 28px;
+  text-align: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.34),
+      rgba(255, 255, 255, 0.13)
+    );
+
+  backdrop-filter: blur(22px) saturate(125%);
+  -webkit-backdrop-filter: blur(22px) saturate(125%);
+
+  box-shadow:
+    0 25px 65px rgba(75, 50, 130, 0.14),
+    inset 0 0 35px rgba(255, 255, 255, 0.18);
+
+  will-change: transform, opacity;
+
+  transition:
+    border-radius 1.2s ease,
+    box-shadow 0.6s ease;
+}
+
+.education-blob::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 14%;
+
+  width: 70px;
+  height: 35px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.38);
+  filter: blur(12px);
+
+  pointer-events: none;
+}
+
+.education-blob::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: inherit;
+
+  pointer-events: none;
+}
+
+.education-blob-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.education-blob-0 {
+  border-radius: 58% 42% 47% 53% / 52% 44% 56% 48%;
+}
+
+.education-blob-1 {
+  border-radius: 45% 55% 58% 42% / 43% 57% 44% 56%;
+}
+
+.education-blob-2 {
+  border-radius: 52% 48% 40% 60% / 58% 42% 55% 45%;
+}
+
+.education-blob:hover {
+  box-shadow:
+    0 30px 75px rgba(75, 50, 130, 0.20),
+    0 0 35px rgba(190, 170, 255, 0.22),
+    inset 0 0 40px rgba(255, 255, 255, 0.22);
+}
+
+@media (max-width: 640px) {
+  .education-cluster {
+    height: 360px;
+  }
+
+  .education-blob {
+    width: 220px;
+    height: 185px;
+    padding: 22px;
+  }
+
+  .education-side-glow {
+    width: 120px;
+    height: 120px;
+  }
+}
