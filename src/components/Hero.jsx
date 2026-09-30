@@ -81,9 +81,7 @@ function Hero() {
             </p>
 
             <p className="mt-4 max-w-lg text-sm leading-7 text-[#514b5d] md:text-base">
-              I enjoy turning ideas into meaningful digital experiences,
-              exploring new technologies, and continuously learning through
-              the things I build.
+              I'm still becoming the person I want to be, I like making things; sometimes with code, always with care, and usually after the urge to turn my sketches into something you can click.
             </p>
 
             {/* Buttons */}
@@ -140,20 +138,7 @@ function Hero() {
           <div className="absolute left-1/2 top-1/2 h-[215px] w-[215px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/35" />
 
 
-          {/* Central BS glass orb */}
-
-          {/* <div className="absolute left-1/2 top-1/2 flex h-44 w-44 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-white/20 shadow-[0_25px_80px_rgba(76,54,130,0.25)] backdrop-blur-2xl">
-
-            <div className="absolute inset-3 rounded-full border border-white/30" />
-
-            <div className="absolute left-8 top-7 h-12 w-12 rounded-full bg-white/40 blur-xl" />
-
-            <span className="relative text-5xl font-bold tracking-[-0.06em] text-[#30254a]">
-              BS
-            </span>
-
-          </div> */}
-
+    
 {/* Central image glass orb */}
 
 <div className="absolute left-1/2 top-1/2 flex h-44 w-44 -translate-x-1/2 -translate-y-1/2 items-center justify-center overflow-hidden rounded-full border border-white/70 bg-white/20 shadow-[0_25px_80px_rgba(76,54,130,0.25)] backdrop-blur-2xl">
